@@ -1,0 +1,23 @@
+Q1:
+A- To creat a Hidden folder or file:
+mkdir .hiddenfolder
+touch .hidden.txt
+B- To display the hiddenfolder:
+attrib -h -s -r hidden.txt
+
+
+Q2:
+To make nested directories:
+mkdir -p parent/child1/child2/child3/child4
+
+
+Q3:
+To append a message to a file without a newline character:
+first: echo "first message" > test.txt
+second: echo "second message" >> test.txt
+then to test: cat test.txt
+the output: first message
+            second message
+
+Note: I tried also : echo -n "third message" >> test.txt
+ Outputs also without newline character.
