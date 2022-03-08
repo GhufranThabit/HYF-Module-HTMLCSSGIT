@@ -1,0 +1,102 @@
+body{
+    margin:0;
+    padding:0;
+    background-image:url("background.jpg");
+    background-color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    font-size:13px;
+    
+    }
+       
+    .main{
+        display: grid;
+        justify-content: center; 
+        /* Q: when i tried to make 3 header or work it didnt applied ? */
+        grid-template-areas:"header header"
+        "aboutme aboutme"
+        "work skills"
+        "work skills"
+        "footer footer";
+        
+    }
+    
+    img{
+        width:150px;
+        height:150px;
+        border-radius: 80px;
+        border:3px solid rgb(245, 229, 6);
+    }
+    
+    h2{
+        color:rgb(190, 190, 207);
+    
+    }
+    
+    .header{    
+    background-color: rgb(124, 133, 133);
+    grid-area:header ;
+    display: flex;
+    flex-direction: row;
+    /*justify-content is to Horizontally aligns the flex items */
+    justify-content:space-around;
+    align-items: center;
+    padding:3%;
+    }
+    
+    /*Q:tried to add border but it mess with all the styling , what should i do in this case?*/
+    .nam, .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+       
+        
+    }
+    
+    .contactinfo{
+        list-style-type: none;    
+    }
+    
+    .aboutme{
+       
+        grid-area: aboutme;
+        align-items: center;     
+    }
+    
+    p{
+        word-spacing:2px ;
+        word-break: break-all;
+        text-align: justify;
+    }
+    
+    .work{
+        grid-area:work ; 
+    }
+    
+    .skills{
+        grid-area: skills;
+        
+    }
+    footer{
+        grid-area: footer;
+        align-items: center;
+    }
+
+    i{color: beige;
+    font-size: 20px;  
+    }
+    
+    i:hover{
+        color:blue;
+    }
+    
+      .aboutme, .work, .skills, footer{
+        background-color: rgb(84, 87, 87);
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        padding:5%;
+    }
+    /*Q: How could i make all the  text content in two diffrent flex boxes parallel 
+     ex: in .work and .skills or .nam .contact  */
